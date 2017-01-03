@@ -4,9 +4,9 @@ dependencies:
     - echo y | android update sdk --no-ui --all --filter "tools"
     - |
     	if [ ! -d "/usr/local/android-sdk-linux/build-tools/24.0.3" ]; then 
-    		echo y | android update sdk --no-ui --all --filter "build-tools-24.0.3"; 
+    		echo y | android update sdk --no-ui --all --filter "build-tools-24.0.3"
     	else 
-    		echo "schon installed";
+    		echo "schon installed"
 		fi
     - echo y | android update sdk --no-ui --all --filter "build-tools-24.0.3"
     - echo y | android update sdk --no-ui --all --filter "build-tools-25.0.0"
