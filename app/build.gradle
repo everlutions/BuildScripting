@@ -11,6 +11,7 @@ buildscript {
     }
 
     dependencies {
+        classpath 'com.android.tools.build:gradle:2.2.3'
         classpath 'io.fabric.tools:gradle:1.+'
     }
 }
@@ -78,7 +79,27 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'com.android.support:appcompat-v7:25.1.0'
+    compile 'com.android.support:appcompat-v7:25.0.1'
+    compile 'com.android.support:recyclerview-v7:25.0.1'
+    compile 'com.android.support:design:25.0.1'
+
+    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+    compile 'com.squareup.retrofit2:converter-jackson:2.1.0'
+
+//    compile 'com.google.android.gms:play-services-maps:10.0.1'
+//    compile 'com.google.android.gms:play-services-location:10.0.1'
+//    compile 'com.google.android.gms:play-services-places:10.0.1'
+//    compile 'com.google.firebase:firebase-appindexing:10.0.1'
+//    compile 'com.google.firebase:firebase-core:10.0.1'
+//    compile 'com.google.firebase:firebase-messaging:10.0.1'
+
+    compile 'com.jakewharton:butterknife:7.0.1'
+
+    compile 'com.jakewharton.threetenabp:threetenabp:1.0.4'
+    compile 'com.facebook.android:facebook-android-sdk:4.+'
+
+    compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+
     compile('com.crashlytics.sdk.android:crashlytics:2.6.5@aar') {
         transitive = true;
     }
