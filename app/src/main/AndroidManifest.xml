@@ -17,9 +17,14 @@
             </intent-filter>
         </activity>
         <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+        <meta-data
             android:name="io.fabric.ApiKey"
             android:value="4801660074ac9176950a607733ff6bac7400a61d" />
     </application>
 
     <uses-permission android:name="android.permission.INTERNET" />
+
+
 </manifest>

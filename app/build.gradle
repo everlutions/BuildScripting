@@ -45,6 +45,7 @@ android {
 
     defaultConfig {
         applicationId "nl.everlutions.buildscripting"
+        manifestPlaceholders = [myCustomVarName: "el Differente"]
         minSdkVersion 16
         targetSdkVersion 24
         //        multiDexEnabled true
@@ -77,17 +78,17 @@ android {
             signingConfig signingConfigs.storeFile
         }
     }
-    productFlavors {
-        free {
-            manifestPlaceholders = [myCustomVarName: "el Differente"]
-            applicationId "com.example.myapp.free"
-        }
-
-        paid {
-            manifestPlaceholders = [myCustomVarName: "myCustomerVarValue"]
-            applicationId 'com.example.myapp.paid'
-        }
-    }
+//    productFlavors {
+//        free {
+//            manifestPlaceholders = [myCustomVarName: "el Differente"]
+//            applicationId "com.example.myapp.free"
+//        }
+//
+//        paid {
+//            manifestPlaceholders = [myCustomVarName: "myCustomerVarValue"]
+//            applicationId 'com.example.myapp.paid'
+//        }
+//    }
 }
 
 dependencies {
@@ -102,8 +103,8 @@ dependencies {
 //    compile 'com.google.android.gms:play-services-maps:10.0.1'
 //    compile 'com.google.android.gms:play-services-location:10.0.1'
 //    compile 'com.google.android.gms:play-services-places:10.0.1'
+    compile 'com.google.firebase:firebase-core:10.0.1'
 //    compile 'com.google.firebase:firebase-appindexing:10.0.1'
-//    compile 'com.google.firebase:firebase-core:10.0.1'
 //    compile 'com.google.firebase:firebase-messaging:10.0.1'
 
     compile 'com.jakewharton:butterknife:7.0.1'
@@ -117,3 +118,5 @@ dependencies {
         transitive = true;
     }
 }
+
+apply plugin: 'com.google.gms.google-services'
