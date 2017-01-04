@@ -3,6 +3,7 @@
           package="nl.everlutions.buildscripting">
 
     <application
+        android:name=".BaseApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="${myCustomVarName}"
@@ -15,6 +16,10 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="4801660074ac9176950a607733ff6bac7400a61d" />
     </application>
 
+    <uses-permission android:name="android.permission.INTERNET" />
 </manifest>
