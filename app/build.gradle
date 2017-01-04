@@ -1,3 +1,10 @@
+apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
+
+repositories {
+    maven { url 'https://maven.fabric.io/public' }
+}
+
 buildscript {
     repositories {
         maven { url 'https://maven.fabric.io/public' }
@@ -7,15 +14,21 @@ buildscript {
         classpath 'io.fabric.tools:gradle:1.+'
     }
 }
-apply plugin: 'com.android.application'
-apply plugin: 'io.fabric'
-
-repositories {
-    maven { url 'https://maven.fabric.io/public' }
-}
-
 
 android {
+
+    lintOptions {
+        disable 'MissingTranslation'
+    }
+    signingConfigs {
+        storeFile {
+            keyAlias 'projectpine'
+            keyPassword 'projectpine'
+            storePassword 'projectpine'
+            storeFile file('keystore.jks')
+        }
+    }
+
     compileSdkVersion 25
     buildToolsVersion "25.0.0"
     defaultConfig {
